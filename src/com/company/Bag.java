@@ -9,6 +9,16 @@ public class Bag {
         this(amount, null);
     }
 
+    public Long hold(Ticket ticket) {
+        if (hasInvitation()) {
+            setTicket(ticket);
+            return 0L;
+        } else {
+            setTicket(ticket);
+            minusAmount(ticket.getFee());
+            return ticket.getFee();
+        }
+    }
     public Bag(long amount, Invitation invitation) {
         this.amount = amount;
         this.invitation = invitation;
