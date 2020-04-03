@@ -1,4 +1,5 @@
 package com.movie;
 
-public class DiscountCondition {
+public interface DiscountCondition {
+    public boolean isSatisfiedBy(Screening screening);
 }
