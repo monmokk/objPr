@@ -1,6 +1,7 @@
 package com.movie;
 
-public class AmountDiscountPolicy extends DiscountPolicy {
+public class AmountDiscountPolicy {
+    /*extends DiscountPolicy
     private Money discountAmount;
 
     public AmountDiscountPolicy(Money discountAmount, DiscountCondition... conditions) {
@@ -11,5 +12,5 @@ public class AmountDiscountPolicy extends DiscountPolicy {
     @Override
     protected Money getDiscountAmount(Screening screening) {
         return discountAmount;
-    }
+    }*/
 }
