@@ -16,6 +16,14 @@ public class Screening {
         this.whenScreened = whenScreened;
     }
 
+    public LocalDateTime getWhenScreened() {
+        return whenScreened;
+    }
+
+    public int getSequence() {
+        return sequence;
+    }
+
     public LocalDateTime getStartTime() {
         return whenScreened;
     }
@@ -33,7 +41,7 @@ public class Screening {
     }
 
     private Money calculateFee(int audienceCount) {
-        return movie.calculateMovieFee(this).times(audienceCount);
+        return movie.calculateMovieFee(this).times(audienceCount); //송신자인 screening의 의도 표현
     }
 
     public static void main(String[] args) {
@@ -61,4 +69,5 @@ public class Screening {
 
         avatar.changeDiscountPolicy(new PercentDiscountPolicy(0.1, new SequenceCondition(1)));*/
     }
+
 }
